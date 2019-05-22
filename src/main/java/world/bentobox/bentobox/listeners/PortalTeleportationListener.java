@@ -122,7 +122,8 @@ public class PortalTeleportationListener implements Listener {
             if (fromWorld.getEnvironment() != Environment.NETHER) {
                 // To Standard Nether
                 e.setTo(plugin.getIWM().getNetherWorld(fromWorld).getSpawnLocation());
-                e.useTravelAgent(true);
+                //e.useTravelAgent(true);
+                plugin.logWarning("Handling portal without travel agent. Might cause issues on 1.14.");
             }
             // From standard nether
             else {
