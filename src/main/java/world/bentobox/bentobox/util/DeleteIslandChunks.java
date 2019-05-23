@@ -25,6 +25,9 @@ public class DeleteIslandChunks {
 
     @SuppressWarnings({"deprecation", "squid:CallToDeprecatedMethod"})
     public DeleteIslandChunks(BentoBox plugin, IslandDeletion di) {
+        plugin.logWarning("Unable to actually delete island from world and regen chunks as it's not supported on 1.14.1");
+        return;
+        /*
         // Fire event
         IslandEvent.builder().deletedIslandInfo(di).reason(Reason.DELETE_CHUNKS).build();
         x = di.getMinXChunk();
@@ -53,5 +56,6 @@ public class DeleteIslandChunks {
                 }
             }
         }, 0L, 1L);
+        */
     }
 }
